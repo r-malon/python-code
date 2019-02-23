@@ -1,0 +1,10 @@
+import turtle
+x = turtle.Screen()
+x.bgcolor('black')
+pen = turtle.Pen()
+pen.color('hotpink')
+pen.pensize(0.5)
+pen.left(45)
+pen.forward(100)
+pen.right(45)
+pen.forward(100)

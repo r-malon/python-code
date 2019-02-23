@@ -1,0 +1,5 @@
+print("Calculo do salario/hora")
+dias=int(input("Digite o nº de dias trabalhados: "))
+salario=int(input("Digite seu salario: "))
+horas=int(input("Digite quantas horas você trabalha por dia: "))
+print("O seu salario por hora é",salario/(horas*dias))
