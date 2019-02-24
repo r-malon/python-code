@@ -10,7 +10,7 @@ def serve():
 		print("Connection from: " + str(ip))
 		#msg = input('Say: ')
 		clientsock.send(b"HTTP/1.1 200 OK\n"
-         +b"Content-Type: text/html\n\n"
+         + b"Content-Type: text/html\n\n"
          + b"<html><body><h1 style='color: red;'>Hello world</h1></body></html>\n")
          #open(r"C:\Users\RAFAEL\Videos\Site_PI\app\templates\index.html",'r')
 		clientsock.shutdown(SHUT_WR)
