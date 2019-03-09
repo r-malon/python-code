@@ -1,25 +1,3 @@
-'''
-THIS IS A DOCSTRING!!!
-Game Name: Blood, Sweat & Loot
-Creator: Rafael
-
-Ideas:
--Factions: Holy ... Empire, Albion Confederacy, Geroia Republic, etc.
--Tkinter Scale for betting on races and dices in tavern
--Lords and merchants personalities(grumpy etc.)
--RadioButtons for selecting backgorund history(son of: noble, peasant, clergy etc)
--Castle and Village upgrades
--Special places like monasteries, bandit camps, old ruins and caves
--Intelligence, Agility,Charisma,Strongness
--Works for villagers, like Blacksmith, Woodcutter or Farmer
--Taxes, Trade Taxes, Honour(slavery, culture), Renown, Laws, Politicpower etc.
--Hammurabi-like management
--One market per faction or one in every castle?
--Soldiers can run away, flee battle, lose morale etc.
--and more...
----> only kingdom management or also adventuring?
-'''
-
 from random import randint
 from math import ceil, floor
 
