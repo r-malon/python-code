@@ -43,7 +43,9 @@ def new_nodes():
 
 @app.route('/nodes/solve', methods=['GET'])
 def consensus():
-	pass
+	return jsonify({'msg': 'Chain replaced!' if blockchain.consensus() else 'Authoritarian chain',
+	 'chain': blockchain.chain})
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=5000)
+	port = int(input("Type port number: "))
+	app.run(host='0.0.0.0', port=port)

@@ -8,7 +8,7 @@ def about():
 #def change_bg(color):
 #	win.config(background=color)
 
-colorlist = ['Lightgreen', 'Red', 'Lightblue']
+colorlist = ['lightgreen', 'red', 'lightblue']
 
 win = Tk()
 win.geometry("600x480+350+50")

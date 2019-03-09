@@ -19,7 +19,7 @@ class Blockchain:
 		 'prev_hash': prev_hash or self.hash(self.last_block),
 		 'transactions': self.cur_transactions}
 		self.chain.append(block)
-		self.cur_transactions = []
+		#self.cur_transactions = []
 		return block
 
 	def new_transaction(self, sender, recipient, amount):
@@ -48,7 +48,6 @@ class Blockchain:
 			if response.ok:
 				if self.valid_chain(response.json()) and len(response) > max_len:
 					self.chain = response.json()
-					return True
 		return False
 
 	@staticmethod
