@@ -1,9 +1,9 @@
-import requests as req
+from requests import get
 from bs4 import BeautifulSoup as BS
 from sys import argv
 
 def get_scrap(link, tag):
-	response = req.get(link, timeout=5)
+	response = get(link, timeout=5)
 	if not response.ok:
 		return "Error trying to acess %s!\nStatus: %d" % (link, response.status_code)
 	content = BS(response.content, 'html.parser')
@@ -18,8 +18,8 @@ if __name__ == '__main__':
 	#link = 'http://www.fabpedigree.com/james/mathmen.htm'
 	link = argv[1]
 	tag = argv[2]
-	print('Scraped Data\n%s' % (75 * '-'))
+	print(f"Scraped Data\n{75 * '-'}")
 	names = get_scrap(link, tag)
 	for name in names:
-		print(name + ' ' + str(names.count(name)))
+		print(f"{name}, Count: {names.count(name)}")
 	print(names, len(names))
