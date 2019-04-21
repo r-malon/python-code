@@ -15,4 +15,4 @@ def client(address, port):
 if __name__ == '__main__':
 	#x = Thread(target=lambda: client('192.168.0.101', 5000))
 	#x.start()
-	client('192.168.0.101', 5000)
+	client('192.168.10.199', 5000)
