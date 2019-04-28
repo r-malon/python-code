@@ -65,4 +65,4 @@ while active:
         #screen.blit(img_small, position) #move junto c/ mouse
         #surf.fill((100, 0, 150))
         display.flip()
-        clock.tick(240)#frames per second(fps)
+        clock.tick(240)#fps
