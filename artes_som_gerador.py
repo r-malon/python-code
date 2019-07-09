@@ -1,5 +1,5 @@
 import winsound as ws
-from random import *
+from random import randrange
 import os
 
 for i in range(100):

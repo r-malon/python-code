@@ -1,15 +1,15 @@
-p1 = input('telefonou a vitima? ')
-p2 = input('local do crime? ')
-p3 = input('mora perto? ')
-p4 = input('trabalhava c/ a vitima? ')
-p5 = input('devia a vitima? ')
+p1 = input('Telefonou a vitima? ')
+p2 = input('Local do crime? ')
+p3 = input('Mora perto? ')
+p4 = input('Trabalhava c/ a vitima? ')
+p5 = input('Devia a vitima? ')
 x = [p1, p2, p3, p4, p5]
 i = x.count('sim')
 if i == 2:
-    print('suspeito')
+    print('Suspeito')
 elif i == 3 or i == 4:
-    print('cumplice!')
+    print('Cúmplice!')
 elif i > 4:
-    print('assassino!')
+    print('Assassino!')
 else:
-    print('inocente')
+    print('Inocente')

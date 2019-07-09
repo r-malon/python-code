@@ -13,7 +13,7 @@ os.environ['SDL_WINDOWID'] = str(embed.winfo_id())
 os.environ['SDL_VIDEODRIVER'] = 'windib'
 '''
 init()
-screen = display.set_mode((800, 500)) #(width, height)
+screen = display.set_mode((800, 600))
 #surf=Surface((100,100))
 color = [255, 255, 255]
 position = [30, 30]
@@ -25,8 +25,8 @@ reta = rect.Rect(40, 50, 60 , 70) #calling module
 #img_small=transform.scale(img, (75, 50))
 #img_small=transform.rotozoom(img, 30, 1.2) #buggy???
 display.set_caption('jailson mendes')
-icon = image.load(r"C:\Users\RAFAEL\Videos\Python and other random things\fallout.ico")
-display.set_icon(icon)
+#icon = image.load(r"C:\Users\RAFAEL\Videos\Python and other random things\fallout.ico")
+#display.set_icon(icon)
 mouse_pos = mouse.get_pos()
 fonte = font.Font(None, 56)
 txt = fonte.render('perdeu!', 1, (90, 75, 210))
