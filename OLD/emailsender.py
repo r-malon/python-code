@@ -1,26 +1,28 @@
-import smtplib as sm
-x = int(input('qnts e-mails vc vai mandar? '))
-content = input('digite sua msg: ')
-subject = input('qual o assunto: ')
-send = input('digite seu e-mail: ')#jailsoncomemilf@gmail.com, kronergamer@gmail.com,  server.ehlo()
-pwd = input('digite sua senha: ')
-get = input('agora o destinatario: ')
-msg = '''From: <%s>
-To: <%s>
-Subject: %s
+from smtplib import SMTP
+
+x = 1 # int(input('How many? '))
+content = input('Enter your message: ')
+subject = input('Enter the subject: ')
+sender = input('Enter your e-mail: ')
+password = input('Enter your password: ')
+recipient = input('Enter the recipient: ')
+message = f'''From: <{sender}>
+To: <{recipient}>
+Subject: {subject}
 Content-type: text/html
 MIME-Version: 1.0
 
-<h1>%s</h1>
-''' % (send, get, subject, content)
+<h1>{content}</h1>
+'''
+
 for i in range(x):
-    try:
-        server = sm.SMTP('smtp.gmail.com', 587)
-        server.ehlo()
-        server.starttls()
-        server.login(send, pwd)
-        server.sendmail(send, get, msg)
-        print('enviado o %dº e-mail' % i+1)
-        server.quit()
-    except sm.SMTPException:
-        print('erro')
+	try:
+		server = SMTP('smtp.gmail.com', 587)
+		server.ehlo()
+		server.starttls()
+		server.login(sender, password)
+		server.sendmail(sender, recipient, message)
+		print('%dº e-mail sent' % i + 1)
+		server.quit()
+	except Exception as e:
+		print('Error: ', e)

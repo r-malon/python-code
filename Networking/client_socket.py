@@ -3,7 +3,7 @@ from threading import Thread
 
 def client(address, port):
 	sock = socket(AF_INET, SOCK_STREAM)
-	sock.connect((address, port)) #0.0.0.0 isnt valid
+	sock.connect((address, port)) # 0.0.0.0 isnt valid
 	while True:
 		data = sock.recv(2048)
 		print('%s -' % address, data.decode('utf-8'))

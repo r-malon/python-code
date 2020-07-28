@@ -1,4 +1,4 @@
-def VowelSquare(x):
+def vowel_square(x):
 	vowels = ['a', 'e', 'i', 'o', 'u']
 	topleft = []
 	for line in x:
@@ -8,6 +8,6 @@ def VowelSquare(x):
 	return topleft
 
 if __name__ == '__main__':
-	print(VowelSquare(["aqrst", "ukaei", "ffooo"]))
-	print(VowelSquare(["abcd", "eikr", "oufj"]))
-	print(VowelSquare(["fff", "ggg"]))
+	print(vowel_square(["aqrst", "ukaei", "ffooo"]))
+	print(vowel_square(["abcd", "eikr", "oufj"]))
+	print(vowel_square(["fff", "ggg"]))

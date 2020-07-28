@@ -43,6 +43,7 @@ colors = [
 	'#DFDF9F',
 	'#EFEFC7',
 	'#FFFFFF']
+
 blocks = []
 for i in range(0, 400, 20):
 	for j in range(0, 400, 20):

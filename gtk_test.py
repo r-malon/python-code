@@ -15,10 +15,10 @@ class MyWindow(Gtk.Window):
 			 lambda: print(self.btn_list[i].get_label()))
 			self.box.pack_start(self.btn_list[i], 1, 1, 20)
 		
-
-win = MyWindow('hello!')
-win.connect("destroy", Gtk.main_quit)
-win.set_default_size(600, 480)
-win.set_icon_from_file('fallout.ico')
-win.show_all()
-Gtk.main()
+if __name__ == '__main__':
+	win = MyWindow('hello!')
+	win.connect("destroy", Gtk.main_quit)
+	win.set_default_size(600, 480)
+	win.set_icon_from_file('fallout.ico')
+	win.show_all()
+	Gtk.main()

@@ -1,6 +1,6 @@
-# My projects and code snippets
+# Python code snippets
 ---
-These are my projects and code snippets, some personal, some for school, almost all made in Python 3.
+Here are some code snippets, some personal, some for school, all made in Python 3.
 
 ## Authors
 - **Rafael Malon**

@@ -6,7 +6,7 @@ class ReminderManager:
 		self.reminders = []
 
 	def create(self):
-		msg = input('Type what do you want to remind: ')
+		msg = input('What do you want to remind: ')
 		hour = int(input('Hour: '))
 		minute = int(input('Minute: '))
 		second = int(input('Second: '))
@@ -23,7 +23,7 @@ class ReminderManager:
 				raise IndexError
 			del self.reminders[n-1]
 		except IndexError:
-			print('Write a valid id!')
+			print('Enter a valid id!')
 
 	def activate(self):
 		n = int(input('Type the id of the reminder you will (de)activate: '))
@@ -32,7 +32,7 @@ class ReminderManager:
 				raise IndexError
 			self.reminders[n-1].active = not self.reminders[n-1].active
 		except IndexError:
-			print('Write a valid id!')
+			print('Enter a valid id!')
 
 	def main(self):
 		for i in self.reminders:

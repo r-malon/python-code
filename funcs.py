@@ -13,7 +13,7 @@ def xand2(lado1, lado2, ang):
 	ang3 = 180-(ang+ang2)
 	return ang2, '\n', ang3
 
-def xand3(ang, lado1, lado2): #erros
+def xand3(ang, lado1, lado2): #errors
 	hiddenside = math.sqrt(lado1**2 + lado2**2 - 2*lado1*lado2*math.cos(math.radians(ang)))
 	return hiddenside
 
