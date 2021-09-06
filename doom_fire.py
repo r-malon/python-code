@@ -1,10 +1,12 @@
 from pygame import *
+from pygame import event as events
 from random import *
 
 init()
 display.init()
-screen = display.set_mode((400, 400))
+screen = display.set_mode((512, 512))
 clock = time.Clock()
+
 colors = [
 	'#070707',
 	'#1F0707',
@@ -42,19 +44,36 @@ colors = [
 	'#CFCF6F',
 	'#DFDF9F',
 	'#EFEFC7',
-	'#FFFFFF']
+	'#FFFFFF'
+]
+
+def render():
+	screen.fill((0, 0, 0))
+	j = -1
+	line = 0
+	for i in range(len(blocks)):
+		if j <= -38:
+			break
+		if randrange(0, line + 1) < 3:
+			draw.rect(screen, Color(colors[j]), blocks[i], 0)
+		if i % 64 == 0:
+			j -= 1
+			line += 1
+	display.flip()
 
 blocks = []
-for i in range(0, 400, 20):
-	for j in range(0, 400, 20):
-		blocks.append(rect.Rect(i, j, 20, 20))
+for i in range(512, 0, -8):
+	for j in range(0, 512, 8):
+		blocks.append(rect.Rect(j, i, 8, 8))
 
-while True:
-	for eve in event.get():
-		if eve.type == QUIT:
-			quit()
-		screen.fill((255, 0, 0))
-		for block, color in zip(blocks, colors):
-			draw.rect(screen, Color(color), block, 0)
-		display.flip()
-		clock.tick(35)
+running = True
+while running:
+	for event in events.get():
+		if event.type == QUIT:
+			running = False
+		elif event.type in [KEYUP, KEYDOWN]:
+			if event.key == K_ESCAPE:
+				running = False
+
+		render()
+		clock.tick(60)

@@ -9,4 +9,4 @@ def sorter(l):
 	return l
 
 if __name__ == '__main__':
-	print(sorter([12, 5, 13, 14, 1, 3, 2, 2.5]))
+	print(sorter([12, 5, 13, 11.2, 14, 1, 3, 2, 2.5]))

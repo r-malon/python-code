@@ -39,6 +39,7 @@ class ReminderManager:
 			x = Thread(target=i.main)
 			x.start()
 
+
 if __name__ == '__main__':
 	manager = ReminderManager()
 	n = int(input("How many reminders you will create? "))
