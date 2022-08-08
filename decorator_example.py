@@ -2,7 +2,7 @@ def dec(func):
 	def wrap():
 		print('before')
 		func()
-		print('after!')
+		print('after')
 	return wrap
 
 @dec

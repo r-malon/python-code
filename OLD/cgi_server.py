@@ -7,7 +7,6 @@ msg='<h1>Ola jose!</h1><br><p>Como vai?</p>'
 wfile.write(msg, 'utf-8')
 s=HTTPServer(address)
 s.serve_forever()'''
-#!/usr/bin/env python
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 

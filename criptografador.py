@@ -1,6 +1,6 @@
 from random import sample
 
-ALPHABET= ' abcdefghijklmnopqrstuvwxyz'
+ALPHABET = ' abcdefghijklmnopqrstuvwxyz'
 MAX_KEY_SZ = 9
 
 def gen_key(length):
@@ -50,6 +50,7 @@ if __name__ == '__main__':
 			print('Resultado: ', decode(msg, key))
 		else:
 			break
+
 	frase = 'abortar operacao'
 	chave = [11,7,9,3,4]
 	codigo = encode(frase, chave)

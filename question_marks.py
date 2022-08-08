@@ -5,8 +5,8 @@ def qmark(x):
 			num_list.append(x.index(i))
 			print(x.index(i))
 	for i in range(0, len(num_list), 2):
-		#if '?' in x[num_list[i]:num_list[i+2]]:
-		if x[num_list[i]:num_list[i+2]].count('?') != 3 and '?' in x[num_list[i]:num_list[i+2]]:
+		#if '?' in x[num_list[i]:num_list[i + 2]]:
+		if x[num_list[i]:num_list[i + 2]].count('?') != 3 and '?' in x[num_list[i]:num_list[i + 2]]:
 			return False
 	return True
 

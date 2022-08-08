@@ -14,14 +14,14 @@ class ReminderManager:
 
 	def list_all(self):
 		for i in enumerate(self.reminders):
-			print(str(i[0] + 1) + ' > ' + i[1].msg + f" - {i[1].date[0]}:{i[1].date[1]}:{i[1].date[2]}")
+			print(str(i[0] + 1) + ' > ' + i[1].msg + f' - {i[1].date[0]}:{i[1].date[1]}:{i[1].date[2]}')
 
 	def delete(self):
 		n = int(input('Type the id you will delete: '))
 		try:
 			if n <= 0:
 				raise IndexError
-			del self.reminders[n-1]
+			del self.reminders[n - 1]
 		except IndexError:
 			print('Enter a valid id!')
 
@@ -42,7 +42,7 @@ class ReminderManager:
 
 if __name__ == '__main__':
 	manager = ReminderManager()
-	n = int(input("How many reminders you will create? "))
+	n = int(input('How many reminders you will create? '))
 	for i in range(n):
 		manager.create()
 	manager.list_all()

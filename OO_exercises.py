@@ -13,7 +13,7 @@ class Circle(object):
 	def __init__(self, raio=1):
 		self.raio = abs(raio)
 	def area(self):
-		return (raio ** 2) * 3.14
+		return (raio ** 2) * 3.14159
 
 class Point(object):
 	def __init__(self, x=0, y=0, z=0):
@@ -29,7 +29,7 @@ class Square(object):
 class State(object):
 	def __init__(self, name, frontiers, cities):
 		self.name = name
-		#self.capital = capital
+#		self.capital = capital
 		self.frontiers = frontiers
 		self.cities = cities
 
@@ -42,7 +42,7 @@ class State(object):
 		return self.frontiers
 
 	def shared_frontiers(self, other):
-		shared=[]
+		shared = []
 		for state in self.frontiers:
 			if state in other.frontiers:
 				shared.append(state)
@@ -54,10 +54,12 @@ class State(object):
 			names.append(city.name)
 		return names
 
-	def rank_cities(self): #if False it starts from the lowest
-		return sorted(self.cities, 
+	def rank_cities(self): # if false it starts from the lowest
+		return sorted(
+			self.cities, 
 			key=lambda n: n.residents, 
-			reverse=True)
+			reverse=True
+		)
 
 class City:
 	def __init__(self, name, residents, capital=False):
@@ -68,7 +70,13 @@ class City:
 if __name__ == '__main__':
 	x = Dog('Rex', 18, 'German Shepherd')
 	sc = State('Santa Catarina', ['Paraná', 'Rio Grande do Sul', 'Santa Catarina'], ['Blumenau', 'Floripa'])
-	pr = State('Paraná', ['Santa Catarina'], [City('Curitiba', 1000, capital=True), City('Maringá', 200), City('Londrina', 300), City('Pato Branco', 250)])
+	pr = State('Paraná', ['Santa Catarina'], 
+		[
+		City('Curitiba', 1000, capital=True), 
+		City('Maringá', 200), City('Londrina', 300), 
+		City('Pato Branco', 250)
+		]
+	)
 	rs = State('Rio Grande do Sul', ['Santa Catarina'], ['Santa Maria', 'Pelotas', 'Chuí'])
 
 	print(sc.view_frontiers())

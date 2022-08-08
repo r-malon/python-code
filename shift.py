@@ -1,7 +1,7 @@
 '''
 Write a solution that will return the numbers of ways
- you can sum to n using no more than any two numbers in the form of 2^n
- (i.e. for n=10, you can use at most 2x1, 2x2, 2x4, 2x8)
+you can sum to n using no more than any two numbers in the form of 2^n
+(i.e. for n=10, you can use at most 2x1, 2x2, 2x4, 2x8)
 
 Order doesn't count.
 
@@ -15,15 +15,15 @@ Examples:
 from random import randrange
 
 def shift(n):
-	lista = []
+	arr = []
 	for i in range(1, n):
 		shifted = n >> i
 		if not shifted:
 			break
 		print(shifted)
-		lista.append(shifted)
-	lista.append(n - sum(lista))
-	return lista
+		arr.append(shifted)
+	arr.append(n - sum(arr))
+	return arr
 
 if __name__ == '__main__':
 	print(shift(randrange(15, 100000)))
